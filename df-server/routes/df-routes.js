@@ -7,11 +7,11 @@ module.exports = app => {
         const resultQuery = await chatbot.textQuery(text)
         console.log(resultQuery)
         const resObj = {
-            // intentName: resultQuery.intent.displayName,
+            intentName: resultQuery.intent.displayName,
             userQuery: resultQuery.queryText,
             fulfillmentText: resultQuery.fulfillmentText
         }
-        res.send("Text query")
+        res.send(resObj)
     })
 
     // app.post('/event_query', (req,res)=>{
