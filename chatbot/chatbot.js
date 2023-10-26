@@ -1,5 +1,6 @@
+'use-strict'
 const dialogflow = require('dialogflow');
-const config = require ('../config/keys');
+const config = require ('../df-server/config/keys');
 const structjson = require('./structjson');
 
 const privateKey = config.googlePrivateKey;

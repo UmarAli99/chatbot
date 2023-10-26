@@ -1,4 +1,4 @@
-const chatbot = require('../chatbot/chatbot')
+const chatbot = require('../../chatbot/chatbot')
 const dialogflow = require('dialogflow');
 const config = require('../config/keys');
 
@@ -8,7 +8,7 @@ const sessionPath = sessionClient.sessionPath(config.googleProjectId, config.dia
 
 module.exports = app => {
 
-    app.post('/text_query', async(req, res)=>{
+    app.post('/api/text_query', async(req, res)=>{
         console.log(req)
         const {text} = req.body;
         const resultQuery = await chatbot.textQuery(text)
